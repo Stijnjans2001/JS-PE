@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<formname= "ValidatieFormulier"></form> 
+<meta= "viewport" content="width=device-width,initial-scale=1"></meta>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 0px;
+        text-align: left;
+        padding: 8px;
+    }
+    td input, select {
+        padding: 10px;
+    }
+    body {font-family: Arial, Helvetica, sans-serif;}
+</style>
+</head>
+
+<body>
+  //Hoofding...
+    <div class="Formulier">
+        <h1>Registreer</h1>
+        <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+        <hr>
+    </div>
+  //Voornaam, Naam lijn...
+    <table>
+        <tr>
+            <th>Voornaam</th>
+            <th>Naam</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Uw voornaam" name="Voornaam" required></td>
+            <td><input type="text" placeholder="Uw naam" name="Naam" required></td>
+        </tr>
+  //Gebruiksnaam, E-mailadres lijn...
+        <tr>
+            <th>Gebruiksnaam</th>
+            <th>E-emailadres</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="u911236" name="Gebruiksnaam" required></td>
+            <td><input type="text" placeholder="mail@example.be" name="E-mailadres"></td>
+        </tr>
+  //Wachtoord, Herhaal wachtwoord lijn...
+        <tr>
+            <th>Wachtwoord</th>
+            <th>herhaal wachtwoord</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="password" placeholder="" name="Wachtwoord" required>
+            </td>
+            <td>
+                <input type="password" placeholder="" name="Herhaal wachtwoord" required>
+            </td>
+        </tr>
+        <tr>
+            <td><p>Je wachtwoord moet minstens 8 tekens lang zijn.</p></td>
+        </tr>
+    </table>
+  //Adres lijn...
+    <table>
+        <tr>
+            <th colspan="2">Adres</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Uw adres en huisnummer" name="Adres" required></td>
+        </tr>
+    </table>
+  //Land, Provincie, Postcode lijn...
+    <table>
+        <tr>
+            <th>Land</th>
+            <th>Provincie</th>
+            <th>Postcode</th>
+        </tr>
+        <tr>
+            <td>    
+                <select name= "Land" id= "Land">
+                    <option value= "leeg">Kies een land</option>
+                    <option value= "België">België</option>
+                    <option value= "Duitsland">Duitsland</option>
+                    <option value= "Frankrijk">Frankrijk</option>
+                    <option value= "Nederland">Nederland</option>
+                    required
+                </select>
+            </td>
+            <td>
+                <select name= "Provincie" id= "Provincie">
+                    <option value= "leeg">Kies een provincie</option>
+                        <optgroup label="Belgische provincies">
+                            <option value= "België1">Antwerpen</option>
+                            <option value= "België2">Henegouwen</option>
+                            <option value= "België3">Limburg</option>
+                            <option value= "België4">Luik</option>
+                            <option value= "België5">Luxemburg</option>
+                            <option value= "België6">Namen</option>
+                            <option value= "België7">oost-Vlaanderen</option>
+                            <option value= "België8">Vlaams-Brabant</option>
+                            <option value= "België9">Waals-Brabant</option>
+                            <option value= "België10">West-Vlaanderen</option>
+                        </optgroup>
+                        <optgroup label="Duitse provincies">
+                            <option value= "Duitsland1">Baden-Württemberg</option>
+                            <option value= "Duitsland2">Beieren</option>
+                            <option value= "Duitsland3">Berlijn</option>
+                            <option value= "Duitsland4">Branderburg</option>
+                            <option value= "Duitsland5">Bremen</option>
+                            <option value= "Duitsland6">Hamburg</option>
+                            <option value= "Duitsland7">Hessen</option>
+                            <option value= "Duitsland8">Mecklenburg-Voor-Pommeren</option>
+                            <option value= "Duitsland9">Nedersaksen</option>
+                            <option value= "Duitsland10">Noordrijn-Westfalen</option>
+                            <option value= "Duitsland11">Rijnland-Palts</option>
+                            <option value= "Duitsland12">Saarland</option>
+                            <option value= "Duitsland13">Saksen</option>
+                            <option value= "Duitsland14">Saksen-Anhalt</option>
+                            <option value= "Duitsland15">Sleeswijk-Holstein</option>
+                            <option value= "Duitsland16">Thüringen</option>
+                        </optgroup>
+                        <optgroup label="Franse provincies">
+                            <option value= "Frankrijk1">Angoumois</option>
+                            <option value= "Frankrijk2">Anjou</option>
+                            <option value= "Frankrijk3">Artesië</option>
+                            <option value= "Frankrijk39">Aunis</option>
+                            <option value= "Frankrijk4">Auvergne</option>
+                            <option value= "Frankrijk5">Avignon et Comtat Venaissin</option>
+                            <option value= "Frankrijk6">Béarn</option>
+                            <option value= "Frankrijk7">Berry</option>
+                            <option value= "Frankrijk8">Bourbonnais</option>
+                            <option value= "Frankrijk9">Bourgondië</option>
+                            <option value= "Frankrijk10">Bretagne</option>
+                            <option value= "Frankrijk11">Champagne</option>
+                            <option value= "Frankrijk12">Corsica</option>
+                            <option value= "Frankrijk13">Dauphiné</option>
+                            <option value= "Frankrijk14">Elzas</option>
+                            <option value= "Frankrijk15">Foix</option>
+                            <option value= "Frankrijk16">Franche-Comté</option>
+                            <option value= "Frankrijk17">Guyenne et Gasconje</option>
+                            <option value= "Frankrijk18">Ïle-de-France</option>
+                            <option value= "Frankrijk19">Languedoc</option>
+                            <option value= "Frankrijk20">Limousin</option>
+                            <option value= "Frankrijk21">Lotharingen</option>
+                            <option value= "Frankrijk22">Lyonnais</option>
+                            <option value= "Frankrijk23">Maine</option>
+                            <option value= "Frankrijk24">Marche</option>
+                            <option value= "Frankrijk25">Montbéliard</option>
+                            <option value= "Frankrijk26">Mulhouse</option>
+                            <option value= "Frankrijk27">Nivernais</option>
+                            <option value= "Frankrijk28">Nizza</option>
+                            <option value= "Frankrijk29">Normandië</option>
+                            <option value= "Frankrijk30">Orléanais</option>
+                            <option value= "Frankrijk31">Picardië</option>
+                            <option value= "Frankrijk32">Poitou</option>
+                            <option value= "Frankrijk33">Provence</option>
+                            <option value= "Frankrijk34">Roussillon</option>
+                            <option value= "Frankrijk35">Saintonge</option>
+                            <option value= "Frankrijk36">Savoye</option>
+                            <option value= "Frankrijk37">Touraine</option>
+                            <option value= "Frankrijk38">Vlaanderen</option>
+                        </optgroup>
+                        <optgroup label="Nederlandse provincies">
+                            <option value= "Nederland1">Drethe</option>
+                            <option value= "Nederland2">Flevoland</option>
+                            <option value= "Nederland3">Friesland</option>
+                            <option value= "Nederland4">Gelderland</option>
+                            <option value= "Nederland5">Groningen</option>
+                            <option value= "Nederland6">Limburg</option>
+                            <option value= "Nederland7">Noord-Brabant</option>
+                            <option value= "Nederland8">Noord-Holland</option>
+                            <option value= "Nederland9">Overijssel</option>
+                            <option value= "Nederland10">Utrecht</option>
+                            <option value= "Nederland11">Zeeland</option>
+                            <option value= "Nederland12">Zuid-Holland</option>
+                        </optgroup>
+                    required
+                </select>
+            </td>
+            <td><input type="number" placeholder="" name="Postcode"></td>
+        </tr>
+    </table>
+  //Hou me op de hoogte, Betaling lijn...
+    <table>
+        <tr>
+            <th>Hou me op de hoogte</th>
+            <th>Betaling</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="Nieuwsbrief" name="Nieuwsbrief">
+                <label for="Nieuwsbrief">Inschrijven voor onze nieuwsbrief</label><br>
+                <input type="checkbox" id="AlgemeneVoorwaarden" name="AlgemeneVoorwaarden" required>
+                <label for="AlgemeneVoorwaarden">Ik ga akkoord met de algemene voorwaarden.</label>
+            </td>
+            <td>
+                <input type="radio" name="Banking" value="App">
+                <label for="App">Banking app</label><br>
+                <input type="radio" name="Banking" value="Overschrijving">
+                <label for="Overschrijving">Overschrijving</label><br>
+                <input type="radio" name="Banking" value="Visa">
+                <label for="Visa">Visa card</label><br>
+                <input type="radio" name="Banking" value="PayPal">
+                <label for="PayPal">PayPal</label>
+            </td>
+        </tr>
+    </table>
+  //Validatie lijn...
+
+<script>
+    Array = ["success", "info", "danger-wachtwoorden", "danger-adres", "danger-postcode", "danger-leeg"]; 
+</script>
+
+
+    <div class="endform">
+        <button type="submit" onclick="validateForm()">Wave your magic wand</button>
+    </div>
+
+    <div class="errors">
+        <div class="alert alert-success">
+            <strong>Goed gedaan!</strong><br> Aww yeah, je werd geregistreerd.
+        </div>
+        <div class="alert alert-info">
+            <strong>Betalingswijze</strong><br> Je betalingswijze is ...
+        </div>
+        <div class="alert alert-danger-wachtwoorden">
+            <strong>Yikes, errors...</strong><br> Je wachtwoorden komen niet overeen. <br>
+        </div>
+        <div class="alert alert-danger-adres">
+            <strong>Yikes, errors...</strong><br> Adres is vereist. <br>
+        </div>
+        <div class="alert alert-danger-postcode">
+            <strong>Yikes, errors...</strong><br> De waarde van postcode moet tussen 1000 en 9999 liggen. <br>
+        </div>
+        <div class="alert alert-danger-leeg">
+            <strong>Yikes, errors...</strong><br> 
+            Het veld voornaam is vereist. <br>
+            Het veld naam is vereist. <br>
+            Het veld gebruiksnaam is vereist. <br>
+            Het veld e-mailadres is vereist. <br>
+            Het veld wachtwoord is vereist. <br>
+            Het veld herhaal wachtwoord is vereist. <br>
+            Adres is vereist. <br>
+            Provincie is vereist. <br>
+            Het veld postcode is vereist. <br>
+            Je moet de algemene voorwaarden accepteren. <br>
+        </div>
+    </div>
+    <funtion validateForm() {
+
+    }
+</body>
+</html>
