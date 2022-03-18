@@ -9,67 +9,81 @@
     Ik vind het jammer om een "niet" afgewerkte taak in te dienen.
     Ik hoop nog veel te leren uit de modules van semester 1, 
     waarna ik deze opdracht hopelijk wel tot goed einde kan brengen.
+    Github en eduweb heb ik ook niet kunnen regelen. 
+    Het werkte echt niet mist hulp van andere medestudenten.
     Met vriendelijke groeten 
     Stijn Janssens
 -->
+
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
-<link rel="stylesheet" href="css/bootstrap.css">
-<script>
-    var Errors = [];
-    function validateForm() {
-        var varVoornaam= document.forms["Formulier"]["InputVoornaam"].value;
-        var varNaam= document.forms["Formulier"]["InputNaam"].value;
-        var varGebruiksnaam= document.forms["Formulier"]["InputGebruiksnaam"].value;
-        var varEmailadres= document.forms["Formulier"]["InputE-mailadres"].value;
-        var varWachtwoord= document.forms["Formulier"]["InputWachtwoord"].value;
-        var varHerhaalwachtwoord= document.forms["Formulier"]["InputHerhaal_wachtwoord"].value;
-        var varAdres= document.forms["Formulier"]["InputAdres"].value;
-        var varLand= document.forms["Formulier"]["InputLand"].value;
-        var varProvincie= document.forms["Formulier"]["InputProvincie"].value;
-        var varPostcode= document.forms["Formulier"]["InputPostcode"].value;
-        var varAlgemeneVoorwaarden= document.forms["Formulier"]["InputAlgemeneVoorwaarden"].value;
-        var varBetaling= document.forms["Formulier"]["Banking"].value;
-        
-        checkEmptyField(varVoornaam, "Het veld voornaam is vereist");
-        checkEmptyField(varNaam, "Het veld naam is vereist");
-        checkEmptyField(varGebruiksnaam, "Het veld gebruiksnaam is vereist");
-        checkEmptyField(varEmailadres, "Het veld e-mailadres is vereist");
-        checkEmptyField(varWachtwoord, "Het veld wachtwoord is vereist");
-        checkEmptyField(varHerhaalwachtwoord, "Het veld herhaal wachtwoord is vereist");
-        checkEmptyField(varAdres, "Adres is vereist");
-        checkEmptyField(varLand, "Land is vereist");
-        checkEmptyField(varProvincie, "Provincie is vereist");
-        
-        if (varWachtwoord.length < 8){
-        Errors[Errors.length] = "Het wachtwoord moet minstens 8 tekens lang zijn.";
+    <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        var Errors = [];
+
+        function validateForm() {
+            var varVoornaam = document.forms["Formulier"]["InputVoornaam"].value;
+            var varNaam = document.forms["Formulier"]["InputNaam"].value;
+            var varGebruiksnaam = document.forms["Formulier"]["InputGebruiksnaam"].value;
+            var varEmailadres = document.forms["Formulier"]["InputE-mailadres"].value;
+            var varWachtwoord = document.forms["Formulier"]["InputWachtwoord"].value;
+            var varHerhaalwachtwoord = document.forms["Formulier"]["InputHerhaal_wachtwoord"].value;
+            var varAdres = document.forms["Formulier"]["InputAdres"].value;
+            var varLand = document.forms["Formulier"]["InputLand"].value;
+            var varProvincie = document.forms["Formulier"]["InputProvincie"].value;
+            var varPostcode = document.forms["Formulier"]["InputPostcode"].value;
+            var varAlgemeneVoorwaarden = document.forms["Formulier"]["InputAlgemeneVoorwaarden"].value;
+            var varBetaling = document.forms["Formulier"]["Banking"].value;
+
+            checkEmptyField(varVoornaam, "Het veld voornaam is vereist");
+            checkEmptyField(varNaam, "Het veld naam is vereist");
+            checkEmptyField(varGebruiksnaam, "Het veld gebruiksnaam is vereist");
+            checkEmptyField(varEmailadres, "Het veld e-mailadres is vereist");
+            checkEmptyField(varWachtwoord, "Het veld wachtwoord is vereist");
+            checkEmptyField(varHerhaalwachtwoord, "Het veld herhaal wachtwoord is vereist");
+            checkEmptyField(varAdres, "Adres is vereist");
+            checkEmptyField(varLand, "Land is vereist");
+            checkEmptyField(varProvincie, "Provincie is vereist");
+
+            if (varWachtwoord.length < 8) {
+                Errors[Errors.length] = "Het wachtwoord moet minstens 8 tekens lang zijn.";
+            }
+            if (varWachtwoord == varHerhaalwachtwoord) {
+                Errors[Errors.length] = "Beide wachtwoorden zijn niet gelijk aan elkaar.";
+            }
+            alert(Errors)
+
+            function checkEmptyField(veld, melding) {
+
+                if (veld == "") {
+                    Errors[Errors.length] = melding;
+                }
+            }
         }
-        if (varWachtwoord == varHerhaalwachtwoord) {
-        Errors[Errors.length] = "Beide wachtwoorden zijn niet gelijk aan elkaar.";
+    </script>
+    <style>
+        body {
+            background: rgb(204, 204, 204);
         }
-        alert(Errors)
-    }
-</script>
-<style>
-body {
-  background: rgb(204,204,204); 
-}
-page[size="A4"] {
-  background: white;
-  width: 21cm;
-  height: 29.7cm;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-}
-@media print {
-  body, page[size="A4"] {
-    margin: 0;
-    box-shadow: 0;
-  }
-}
-</style>
+        
+        page[size="A4"] {
+            background: white;
+            width: 21cm;
+            height: 29.7cm;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+        
+        @media print {
+            body,
+            page[size="A4"] {
+                margin: 0;
+                box-shadow: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -90,8 +104,8 @@ page[size="A4"] {
                     </div>
                     <div class="col">
                         <label for="Naam">Naam</label><br>
-                        <input type="text"class="form-control" placeholder="Uw naam" name="InputNaam">
-                        
+                        <input type="text" class="form-control" placeholder="Uw naam" name="InputNaam">
+
                     </div>
                 </div>
                 <br>
@@ -110,8 +124,8 @@ page[size="A4"] {
                     </div>
                     <div class="col">
                         <label for="E-mailadres">E-mailadres</label><br>
-                        <input type="email" class="form-control" placeholder="mail@example.be" name="InputE-mailadres">  
-                    </div>  
+                        <input type="email" class="form-control" placeholder="mail@example.be" name="InputE-mailadres">
+                    </div>
                 </div>
                 <br>
                 <!-- Rij 3, hierin zit het wachtwoord en herhaal wachtwoord van de persoon. -->
@@ -123,13 +137,13 @@ page[size="A4"] {
                     </div>
                     <div class="col">
                         <label for="Herhaal_wachtwoord">Herhaal wachtwoord</label><br>
-                        <input type="password" class="form-control" placeholder="" name="InputHerhaal_wachtwoord"> 
+                        <input type="password" class="form-control" placeholder="" name="InputHerhaal_wachtwoord">
                     </div>
                 </div>
                 <!-- Rij 4, hierin zit het adres van de persoon. -->
                 <div class="row">
                     <div class="col">
-                        <label for="Adres"  class="form-check-label">Adres</label><br>
+                        <label for="Adres" class="form-check-label">Adres</label><br>
                         <input type="text" class="form-control" placeholder="Uw adres en huisnummer" name="InputAdres">
                     </div>
                 </div>
@@ -139,18 +153,18 @@ page[size="A4"] {
                     <div class="col">
                         <label for="Land" class="form-check-label">Land</label><br>
                         <!-- Rij 2, hierin zit de gebruiksnaam en e-mail van de persoon. -->
-                        <select class="form-control" name= "InputLand">
+                        <select class="form-control" name="InputLand">
                             <!-- https://www.w3schools.com/html/html_forms.asp -->
                             <option value="">Kies een land</option>
                             <option value= "België">België</option>
                             <option value= "Duitsland">Duitsland</option>
                             <option value= "Frankrijk">Frankrijk</option>
                             <option value= "Nederland">Nederland</option>
-                        </select>            
+                        </select>
                     </div>
                     <div class="col">
                         <label for="Provincie" class="form-check-label">Provincie</label><br>
-                        <select class="form-control" name= "InputProvincie">
+                        <select class="form-control" name="InputProvincie">
                             <option value="">Kies een provincie</option>
                                 <optgroup label="Belgische provincies">
                                     <option value= "België1">Antwerpen</option>
@@ -241,7 +255,7 @@ page[size="A4"] {
                     </div>
                     <div class="col">
                         <label for="Postcode">Postcode</label><br>
-                        <input type="number" class="form-control" placeholder="" name="InputPostcode">        
+                        <input type="number" class="form-control" placeholder="" name="InputPostcode">
                     </div>
                 </div>
                 <br>
@@ -254,41 +268,42 @@ page[size="A4"] {
                         <div>
                             <input type="checkbox" class="form-check-input" name="InputNieuwsbrief">
                             <label for="Nieuwsbrief" class="form-check-label">Inschrijven voor onze nieuwsbrief</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" class="form-check-input" name="InputAlgemeneVoorwaarden">
-                            <label for="AlgemeneVoorwaarden" class="form-check-label">Ik ga akkoord met de Algemene voorwaarden</label>
-                        </div>
                     </div>
-                    <div class="col">
-                        <!-- https://www.w3schools.com/html/html_forms.asp -->
-                        <label for="Betaling"><h2>Betaling</h2></label><br>
-                        <div>
-                            <input type="radio" class="form-check-input" name="Banking" value="App">
-                            <label for="App" class="form-check-label">Banking app</label>
-                        </div>
-                        <div>
-                            <input type="radio" class="form-check-input" name="Banking" value="Overschrijving">
-                            <label for="Overschrijving" class="form-check-label">Overschrijving</label>
-                        </div>
-                        <div>
-                            <input type="radio" class="form-check-input" name="Banking" value="Visa">
-                            <label for="Visa" class="form-check-label">Visa card</label>
-                        </div>
-                        <div>
-                            <input type="radio" class="form-check-input" name="Banking" value="PayPal">
-                            <label for="PayPal" class="form-check-label">PayPal</label>
-                        </div>
+                    <div>
+                        <input type="checkbox" class="form-check-input" name="InputAlgemeneVoorwaarden">
+                        <label for="AlgemeneVoorwaarden" class="form-check-label">Ik ga akkoord met de Algemene voorwaarden</label>
                     </div>
                 </div>
-                <br><br>
-                <!-- Submitknop -->
-                <div class="row">
-                    <input type="submit" class="btn btn-primary" value="Wave your magic wand" style="width: 100%;" onclick="validateForm()"></input>
+                <div class="col">
+                    <!-- https://www.w3schools.com/html/html_forms.asp -->
+                    <label for="Betaling"><h2>Betaling</h2></label><br>
+                    <div>
+                        <input type="radio" class="form-check-input" name="Banking" value="App">
+                        <label for="App" class="form-check-label">Banking app</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="Banking" value="Overschrijving">
+                        <label for="Overschrijving" class="form-check-label">Overschrijving</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="Banking" value="Visa">
+                        <label for="Visa" class="form-check-label">Visa card</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="Banking" value="PayPal">
+                        <label for="PayPal" class="form-check-label">PayPal</label>
+                    </div>
                 </div>
-            </form>
+        </div>
+        <br><br>
+        <!-- Submitknop -->
+        <div class="row">
+            <input type="submit" class="btn btn-primary" value="Wave your magic wand" style="width: 100%;" onclick="validateForm()"></input>
+        </div>
+        </form>
         </div>
         </div>
     </page>
 </body>
+
 </html>
